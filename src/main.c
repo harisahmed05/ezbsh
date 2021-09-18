@@ -1,5 +1,5 @@
-#include <readline/readline.h>
 #include <stdio.h>
+#include <readline/readline.h>
 #include <sys/wait.h>
 
 #include "headers/ezbsh.c"
