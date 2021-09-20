@@ -13,9 +13,18 @@ int main()
         command = get_input(input);
 
         /* Handling empty command */
-        if(!command[0]) {
+        if (!command[0]) {
             free(input);
             free(command);
+            continue;
+        }
+
+        if (strcmp(command[0], "cd") == 0) {
+            if (cd(command[1]) < 0) {
+                perror(command[1]);
+            }
+
+            /* Skip the fork */
             continue;
         }
 
