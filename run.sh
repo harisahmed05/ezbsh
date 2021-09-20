@@ -1,6 +1,9 @@
 #! /bin/bash
 # I'll add makefiles/cmake later
-gcc src/main.c -lreadline -o ezbsh
-./ezbsh
-# If it's already compiled then why again? I'll fix them later.
-# Attention: libreadline-dev required!!!
+if [[ -f ezbsh ]]; then
+    ./ezbsh
+else
+    gcc src/main.c -lreadline -o ezbsh
+    ./ezbsh
+fi
+# Attention: libreadline-dev is required!!!
