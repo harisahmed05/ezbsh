@@ -1,4 +1,4 @@
-#include "headers/ezbsh.c"
+#include "headers/ezbsh.h"
 
 int main()
 {
